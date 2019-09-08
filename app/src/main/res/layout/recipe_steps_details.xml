@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:scrollHorizontally="true"
+    android:ellipsize="end"
+    android:maxLines="1">
+
+    <com.google.android.exoplayer2.ui.SimpleExoPlayerView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/video_exoplayer_view"
+        android:layout_width="match_parent"
+        android:layout_height="275dp"
+        ads:resize_mode="fill"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_steps_image"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recipe_steps_desc"
+        android:layout_marginBottom="12dp"
+        android:layout_marginTop="12dp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/previous_step"
+            android:layout_alignParentLeft="true"
+            android:id="@+id/prev"
+            android:clickable="false"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_step"
+            android:layout_alignParentRight="true"
+            android:id="@+id/next"
+            android:clickable="false"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
